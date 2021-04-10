@@ -1,0 +1,29 @@
+<%= form_for(player) do |p| %>
+
+  <% if player.errors.any? %>
+  <ul>
+    <% player.errors.full_messages.each do |m| %>
+      
+      <li><%= m %></li>
+    <% end %>
+    </ul>  
+  <% end %>
+
+  <%= p.label :name, "名字" %>
+  <%= p.text_field :name %> </br>
+
+  <%= p.label :age, "年紀" %>
+  <%= p.text_field :age %> </br>
+
+  <%= p.label :country, "國家" %>
+  <%= p.text_field :country %> </br>
+
+  <%= p.label :score, "得分" %>
+  <%= p.text_field :score %> </br>
+
+  <%= p.label :team, "球隊" %>
+  <%= p.text_field :team %> </br>
+
+  <%= p.submit %></br>
+
+  <% end %>

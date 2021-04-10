@@ -1,0 +1,30 @@
+<table>
+
+<thead>
+  <tr>
+    <td>名字</td>
+    <td>年紀</td>
+    <td>國家</td>
+    <td>得分</td>
+    <td>球隊</td>
+  </tr>
+</thead>
+
+<tbody>
+
+
+<tr>
+  <td><%= player.name %></td>
+  <td><%= player.age %></td>
+  <td><%= player.country %></td>
+  <td><%= player.score %></td>
+  <td><%= player.team %></td>
+
+  <td>
+  <%= link_to "編輯", edit_player_path(player) %>
+  <%= link_to "刪除", player_path(player), method: "delete", data: { confirm: "刪除？？？" } %>
+  </td>
+</tr>
+
+</tbody>
+</table>
