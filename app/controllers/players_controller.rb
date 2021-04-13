@@ -3,7 +3,7 @@ class PlayersController < ApplicationController
   before_action :find_player, only: [:show, :edit, :update, :destroy]
   
   def index 
-    @players = Player.order(id: :desc)
+    @players = Player.available
   end
 
   def show
@@ -40,8 +40,7 @@ class PlayersController < ApplicationController
   end
 
   def destroy
-  
-    @player.destroy if @player
+    @player.destroy 
     redirect_to players_path, notice: "已刪除"
   end
 

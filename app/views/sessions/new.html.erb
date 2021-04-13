@@ -1,0 +1,14 @@
+<h1>登入</h1>
+
+<%= form_for(@user) do |form| %>
+
+  <div class = "field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class = "field">
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
+  <% end %>
